@@ -1,18 +1,28 @@
 var mongoose = require('mongoose')
 
 var studentSchema = new mongoose.Schema({
-  student_title: {
+  student_name: {
     type: String,
     required: true
   },
 
-  main_image: {
+  student_class: {
     type: String,
     required: true
   },
 
-  student_body: {
+  student_sash: {
     type: String,
+    required: true
+  },
+
+  student_hours: {
+    type: Number,
+    required: true
+  },
+
+  student_remaining: {
+    type: Number,
     required: true
   },
 
