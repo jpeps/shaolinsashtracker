@@ -16,12 +16,15 @@
     <% students.forEach(function(student){ %>
       <div class="col-md-3 col-sm-6">
         <div class="thumbnail">
-          <img src="<%= student.main_image %>">
           <div class="caption">
-            <h4><%= student.student_title %></h4>
+            <h4><%= student.student_name %></h4>
+            <h4><%= student.student_class %></h4>
+            <h4><%= student.student_sash %></h4>
+            <h4><%= student.student_hours %></h4>
+            <h4><%= student.student_remaining %></h4>
           </div>
           <p>
-            <a class="btn btn-warning btn-sm" href="/students/<%= student._id %>">Read more</a>
+            <a class="btn btn-warning btn-sm" href="/students/<%= student._id %>">Profile</a>
           </p>
         </div>
       </div>
