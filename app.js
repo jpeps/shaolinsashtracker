@@ -4,6 +4,7 @@ var express = require('express')
 var app = express()
 
 var bodyParser = require('body-parser')
+var methodOverride = require('method-override')
 
 app.set('port', (process.env.PORT || 3000))
 
@@ -16,6 +17,8 @@ app.use('/fa', express.static(__dirname + '/node_modules/font-awesome'))
 
 // Express Configs
 app.set('view engine', 'ejs')
+
+app.use(methodOverride('_method'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
 

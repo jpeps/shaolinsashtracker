@@ -1,6 +1,6 @@
 <!-- MODAL LOCATION TEMP -->
 
-<div id="postNewModal" class="modal fade" tabindex="-1" role="dialog">
+<div id="studentNewModal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,21 +8,26 @@
         <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
-        <form action="/posts" method="POST">
+
+        <form action="/students" method="POST">
           <div class="form-group">
-            <input class="form-control" name="post_title" type="text" placeholder="name"></input>
+            <input class="form-control" name="studentName" type="text" placeholder="Student Name"></input>
           </div>
           <div class="form-group">
-            <input class="form-control" name="main_image" type="text" placeholder="Image url"></input>
+            <input class="form-control" name="studentClass" type="text" placeholder="Class"></input>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="post_body" placeholder="Describe it!"></textarea>
+            <input class="form-control" name="studentSash" placeholder="Sash Color"></input>
+          </div>
+          <div class="form-group">
+            <input class="form-control" name="studentHours" placeholder="Student Hours"></input>
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary">Add Post</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </form>
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

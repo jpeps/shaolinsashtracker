@@ -5,7 +5,7 @@
   "description": "Track sash requirements",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --recursive --reporter spec",
     "start": "node app.js"
   },
   "author": "Lames Kleindridge",
@@ -13,14 +13,20 @@
   "dependencies": {
     "body-parser": "^1.16.1",
     "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0",
     "ejs": "^2.5.5",
     "express": "^4.14.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
-    "mongoose": "^4.8.2"
+    "method-override": "^2.3.8",
+    "mongoose": "^4.8.2",
+    "request": "^2.81.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jpeps/shaolinsashtracker.git"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }

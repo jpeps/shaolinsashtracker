@@ -24,9 +24,10 @@ module.exports = {
   studentsAddOne: function(req, res) {
     console.log('poo')
     var newStudent = {
-      student_title: req.body.student_title,
-      main_image: req.body.main_image,
-      student_body: req.body.student_body,
+      studentName: req.body.studentName,
+      studentClass: req.body.studentClass,
+      studentSash: req.body.studentSash,
+      studentHours: req.body.studentHours
     }
 
     console.log('-------------------------------------------------------------')
@@ -56,7 +57,7 @@ module.exports = {
     console.log('student get by id')
   },
 
-  studentsUpdateById: function(req, res) {
+  studentsUpdateById: function(req, res) {  
     res.send('student update by id')
     console.log('student update by id')
   },
@@ -64,6 +65,23 @@ module.exports = {
   studentsDeleteById: function(req, res) {
     res.send('student delete by id')
     console.log('student delete by id')
+  },
+
+  // ---------- Random Student Methods ---------- //
+  studentsUpdateHours: function(req, res) {
+    studentNewHours = req.body.studentNewHours
+
+    // Student.findByIdAndUpdate(req.params.studentId, studentNewHours, function(err, updatedStudent){
+    //   if (err) {
+    //     console.log(err)
+    //     res.send('BAD')
+    //   } else {
+    //     res.redirect('/students')
+    //   }
+  // })
+
+    res.send('student update hours')
+    console.log('student update by id - POOOO')
   }
 
 }

@@ -8,7 +8,7 @@ var studentsController = require('../controllers/students.controller.js')
 var globalMiddleware = require('../middleware')
 var authMiddleware   = require('../middleware/authMiddleware')
 
-// student ROUTES
+// STUDENT ROUTES
 router
   .route('/')
     .get(globalMiddleware.test, studentsController.studentsGetAll)
@@ -21,7 +21,7 @@ router
 router
   .route('/:studentId')
     .get(studentsController.studentsGetById)
-    .put(studentsController.studentsUpdateById)
+    .put(studentsController.studentsUpdateHours)
     .delete(studentsController.studentsDeleteById)
 
 module.exports = router
