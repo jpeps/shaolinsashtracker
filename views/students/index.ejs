@@ -17,11 +17,20 @@
       <div class="col-md-3 col-sm-6">
         <div class="thumbnail">
           <div class="caption">
-            <h4><%= student.student_name %></h4>
-            <h4><%= student.student_class %></h4>
-            <h4><%= student.student_sash %></h4>
-            <h4><%= student.student_hours %></h4>
-            <h4><%= student.student_remaining %></h4>
+            <h4>Student: <%= student.studentName %></h4>
+            <h4>Class: <%= student.studentClass %></h4>
+            <h4>Sash: <%= student.studentSash %></h4>
+            <br>
+            <h4>STUDENT ID: <%= student._id %></h4>
+            <br>
+            <h4>
+              Hours: <%= student.studentHours %>
+              <form action="/students/<%= student._id %>?_method=PUT" method="POST">
+                <input name="studentNewHours" type="number">
+                <button type="submit" class="btn btn-xs">Update Hours</button>
+              </form>
+            </h4>
+            <h4>Hours remaining: <%= student.studentHoursRemaining %></h4>
           </div>
           <p>
             <a class="btn btn-warning btn-sm" href="/students/<%= student._id %>">Profile</a>
